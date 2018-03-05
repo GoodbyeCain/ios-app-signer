@@ -9,11 +9,12 @@
 import Foundation
 class Log {
     static let mainBundle = Bundle.main
-    static let bundleID = mainBundle.bundleIdentifier
-    static let bundleName = mainBundle.infoDictionary!["CFBundleName"]
-    static let bundleVersion = mainBundle.infoDictionary!["CFBundleShortVersionString"]
+//    static let bundleID = mainBundle.bundleIdentifier
+    static let bundleID = "com.app.signer.xxx"
+//    static let bundleName = mainBundle.infoDictionary!["CFBundleName"]
+//    static let bundleVersion = mainBundle.infoDictionary!["CFBundleShortVersionString"]
     static let tempDirectory = NSTemporaryDirectory()
-    static var logName = Log.tempDirectory.stringByAppendingPathComponent("\(Log.bundleID!)-\(Date().timeIntervalSince1970).log")
+    static var logName = Log.tempDirectory.stringByAppendingPathComponent("\(Log.bundleID)-\(Date().timeIntervalSince1970).log")
     
     static func write(_ value:String) {
         let formatter = DateFormatter()

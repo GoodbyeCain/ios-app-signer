@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5193C754204D603900987B04 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5193C753204D603900987B04 /* main.swift */; };
+		5193C759204D604D00987B04 /* AppSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5193C758204D604D00987B04 /* AppSigner.swift */; };
+		5193C75A204D607000987B04 /* NSTask-execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655FFF9C1BE9B3E300D43AD8 /* NSTask-execute.swift */; };
+		5193C75B204D607000987B04 /* StringByAppendingPathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655FFF9E1BE9BA9D00D43AD8 /* StringByAppendingPathComponent.swift */; };
+		5193C75C204D607000987B04 /* ProvisioningProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655FFFA11BEAD93600D43AD8 /* ProvisioningProfile.swift */; };
+		5193C75D204D607000987B04 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65311EAF1BF835F100516EFD /* Log.swift */; };
+		5193C75E204D607000987B04 /* NSMenuLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65311EAD1BF8259000516EFD /* NSMenuLink.swift */; };
+		5193C75F204D607000987B04 /* iASShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAA11CDE981500D02053 /* iASShared.swift */; };
 		652408CC1BE743D4006FA4C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652408CB1BE743D4006FA4C6 /* AppDelegate.swift */; };
 		652408CE1BE743D4006FA4C6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652408CD1BE743D4006FA4C6 /* MainView.swift */; };
 		652408D01BE743D4006FA4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652408CF1BE743D4006FA4C6 /* Assets.xcassets */; };
@@ -26,7 +34,22 @@
 		65CED3A32D8B6F3E00E9185B /* fix-wwdr.sh in Resources */ = {isa = PBXBuildFile; fileRef = 65CED3A22D8B6F3E00E9185B /* fix-wwdr.sh */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5193C74F204D603900987B04 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5193C751204D603900987B04 /* AppSigner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AppSigner; sourceTree = BUILT_PRODUCTS_DIR; };
+		5193C753204D603900987B04 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5193C758204D604D00987B04 /* AppSigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSigner.swift; sourceTree = "<group>"; };
 		652408C81BE743D4006FA4C6 /* iOS App Signer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS App Signer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		652408CB1BE743D4006FA4C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		652408CD1BE743D4006FA4C6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -56,6 +79,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5193C74E204D603900987B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		652408C51BE743D4006FA4C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,11 +96,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5193C752204D603900987B04 /* AppSigner */ = {
+			isa = PBXGroup;
+			children = (
+				5193C758204D604D00987B04 /* AppSigner.swift */,
+				5193C753204D603900987B04 /* main.swift */,
+			);
+			path = AppSigner;
+			sourceTree = "<group>";
+		};
 		652408BF1BE743D4006FA4C6 = {
 			isa = PBXGroup;
 			children = (
 				659734971C65B5B900383D2D /* NimbusKit */,
 				652408CA1BE743D4006FA4C6 /* AppSigner */,
+				5193C752204D603900987B04 /* AppSigner */,
 				652408C91BE743D4006FA4C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				652408C81BE743D4006FA4C6 /* iOS App Signer.app */,
+				5193C751204D603900987B04 /* AppSigner */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +208,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5193C750204D603900987B04 /* AppSigner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5193C757204D603900987B04 /* Build configuration list for PBXNativeTarget "AppSigner" */;
+			buildPhases = (
+				5193C74D204D603900987B04 /* Sources */,
+				5193C74E204D603900987B04 /* Frameworks */,
+				5193C74F204D603900987B04 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppSigner;
+			productName = AppSigner;
+			productReference = 5193C751204D603900987B04 /* AppSigner */;
+			productType = "com.apple.product-type.tool";
+		};
 		652408C71BE743D4006FA4C6 /* iOS App Signer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 652408ED1BE743D4006FA4C6 /* Build configuration list for PBXNativeTarget "iOS App Signer" */;
@@ -190,10 +248,15 @@
 		652408C01BE743D4006FA4C6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Daniel Radtke";
 				TargetAttributes = {
+					5193C750204D603900987B04 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = SRDD5RQ9SK;
+						ProvisioningStyle = Manual;
+					};
 					652408C71BE743D4006FA4C6 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 7PM929Z8M2;
@@ -220,6 +283,7 @@
 			projectRoot = "";
 			targets = (
 				652408C71BE743D4006FA4C6 /* iOS App Signer */,
+				5193C750204D603900987B04 /* AppSigner */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +303,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5193C74D204D603900987B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5193C75A204D607000987B04 /* NSTask-execute.swift in Sources */,
+				5193C75B204D607000987B04 /* StringByAppendingPathComponent.swift in Sources */,
+				5193C75C204D607000987B04 /* ProvisioningProfile.swift in Sources */,
+				5193C75D204D607000987B04 /* Log.swift in Sources */,
+				5193C75E204D607000987B04 /* NSMenuLink.swift in Sources */,
+				5193C75F204D607000987B04 /* iASShared.swift in Sources */,
+				5193C754204D603900987B04 /* main.swift in Sources */,
+				5193C759204D604D00987B04 /* AppSigner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		652408C41BE743D4006FA4C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +341,57 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5193C755204D603900987B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = SRDD5RQ9SK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5193C756204D603900987B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		652408EB1BE743D4006FA4C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -383,6 +513,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5193C757204D603900987B04 /* Build configuration list for PBXNativeTarget "AppSigner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5193C755204D603900987B04 /* Debug */,
+				5193C756204D603900987B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		652408C31BE743D4006FA4C6 /* Build configuration list for PBXProject "iOS App Signer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
