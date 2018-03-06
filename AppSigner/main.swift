@@ -8,39 +8,53 @@
 
 import Foundation
 
-func currExecuteablePath() -> String {
-    let pPath = UnsafeMutablePointer<Int8>.allocate(capacity: 512)
-    let pSize = UnsafeMutablePointer<UInt32>.allocate(capacity: 1)
-    pSize.initialize(to: 512)
-    _NSGetExecutablePath(pPath, pSize)
-    let path = String(cString:pPath)
-    pPath.deinitialize()
-    pSize.deinitialize()
-    return path
+func doProgram() {
+    let argCount = CommandLine.argc
+    let arguments = CommandLine.arguments
+    let consoleIO = ConsoleIO();
+    
+    if argCount <= 2 || argCount % 2 == 0 {
+        consoleIO.printUsage()
+    } else {
+        var index = 1
+        
+        let signer = AppSigner()
+        while(index < arguments.count) {
+            let argument = arguments[index]
+            if argument.count != 2 {
+                consoleIO.writeMessage("unknow argument: \(argument)", to: OutputType.error)
+                return
+            }
+            
+            let option = OptionType(value: argument.substring(from: argument.index(argument.startIndex, offsetBy: 1)))
+            let value = arguments[index + 1]
+            switch option {
+            case .input:
+                signer.inputFile = value.expandToFullPath()
+            case .output:
+                signer.outputFile = value.expandToFullPath()
+            case .profile:
+                signer.profileFilename = value.expandToFullPath()
+            case .certificate:
+                signer.signingCertificate = value
+            case .bundleID:
+                signer.newApplicationID = value
+            case .displayName:
+                signer.newDisplayName = value
+            case .version:
+                signer.newVersion = value
+            case .versionShort:
+                signer.newShortVersion = value
+            case .unknown:
+                consoleIO.writeMessage("unknow argument: \(argument) with value:\(value)", to: OutputType.error)
+                return
+            }
+            index += 2
+        }
+        
+        print(signer)
+        signer.doSign()
+    }
 }
 
-var signer = AppSigner()
-
-//var inputPath = "/Users/caingoodbye/Desktop/Happy/food.ipa"
-var inputFile = "./food.ipa"
-var outputFile = "./food_1.ipa"
-
-if inputFile.hasPrefix("./") {
-    inputFile = inputFile.replacingOccurrences(of: "./", with: currExecuteablePath())
-}
-
-if outputFile.hasPrefix("./") {
-    outputFile = outputFile.replacingOccurrences(of: "./", with: currExecuteablePath())
-}
-
-
-signer.inputFile = inputFile
-signer.outputFile = outputFile
-signer.profileFilename = "/Users/caingoodbye/Desktop/Happy/profile.mobileprovision"
-signer.signingCertificate = "iPhone Developer: ji gang (82JMW36TMX)"
-signer.newApplicationID = ""
-signer.newDisplayName = ""
-signer.newVersion = ""
-signer.newShortVersion = ""
-signer.doSign()
-
+doProgram()

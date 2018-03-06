@@ -57,6 +57,22 @@ class AppSigner: NSObject, URLSessionDataDelegate, URLSessionDelegate, URLSessio
     override init() {
         
     }
+    
+    override var description: String{
+        get {
+            let cert = signingCertificate ?? ""
+            let output = outputFile ?? ""
+            let profile = profileFilename ?? ""
+            return  "inputFile: \(inputFile)\n" +
+                    "outputFile:\(output)\n" +
+                    "profileFilename:\(profile)\n" +
+                    "signingCertificate:\(cert)\n" +
+                    "newApplicationID:\(newApplicationID)\n" +
+                    "newDisplayName:\(newDisplayName)\n" +
+                    "newVersion:\(newVersion)\n" +
+                    "newShortVersion:\(newShortVersion)\n"
+        }
+    }
 }
 
 //MARK: Helper

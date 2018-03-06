@@ -15,6 +15,8 @@
 		5193C75D204D607000987B04 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65311EAF1BF835F100516EFD /* Log.swift */; };
 		5193C75E204D607000987B04 /* NSMenuLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65311EAD1BF8259000516EFD /* NSMenuLink.swift */; };
 		5193C75F204D607000987B04 /* iASShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAA11CDE981500D02053 /* iASShared.swift */; };
+		5193C774204E34E800987B04 /* String+Expand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5193C773204E34E800987B04 /* String+Expand.swift */; };
+		5193C776204E747F00987B04 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5193C775204E747F00987B04 /* ConsoleIO.swift */; };
 		652408CC1BE743D4006FA4C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652408CB1BE743D4006FA4C6 /* AppDelegate.swift */; };
 		652408CE1BE743D4006FA4C6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652408CD1BE743D4006FA4C6 /* MainView.swift */; };
 		652408D01BE743D4006FA4C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652408CF1BE743D4006FA4C6 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		5193C751204D603900987B04 /* AppSigner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AppSigner; sourceTree = BUILT_PRODUCTS_DIR; };
 		5193C753204D603900987B04 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5193C758204D604D00987B04 /* AppSigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSigner.swift; sourceTree = "<group>"; };
+		5193C773204E34E800987B04 /* String+Expand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Expand.swift"; sourceTree = "<group>"; };
+		5193C775204E747F00987B04 /* ConsoleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 		652408C81BE743D4006FA4C6 /* iOS App Signer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS App Signer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		652408CB1BE743D4006FA4C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		652408CD1BE743D4006FA4C6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -99,8 +103,10 @@
 		5193C752204D603900987B04 /* AppSigner */ = {
 			isa = PBXGroup;
 			children = (
+				5193C775204E747F00987B04 /* ConsoleIO.swift */,
 				5193C758204D604D00987B04 /* AppSigner.swift */,
 				5193C753204D603900987B04 /* main.swift */,
+				5193C773204E34E800987B04 /* String+Expand.swift */,
 			);
 			path = AppSigner;
 			sourceTree = "<group>";
@@ -307,10 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5193C774204E34E800987B04 /* String+Expand.swift in Sources */,
 				5193C75A204D607000987B04 /* NSTask-execute.swift in Sources */,
 				5193C75B204D607000987B04 /* StringByAppendingPathComponent.swift in Sources */,
 				5193C75C204D607000987B04 /* ProvisioningProfile.swift in Sources */,
 				5193C75D204D607000987B04 /* Log.swift in Sources */,
+				5193C776204E747F00987B04 /* ConsoleIO.swift in Sources */,
 				5193C75E204D607000987B04 /* NSMenuLink.swift in Sources */,
 				5193C75F204D607000987B04 /* iASShared.swift in Sources */,
 				5193C754204D603900987B04 /* main.swift in Sources */,
@@ -357,6 +365,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
+				CONFIGURATION_BUILD_DIR = ../../Happy;
 				DEVELOPMENT_TEAM = SRDD5RQ9SK;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
